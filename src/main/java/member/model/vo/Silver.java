@@ -1,4 +1,5 @@
 package member.model.vo;
 
-public class Silver {
+public class Silver extends Member {
+
 }
