@@ -1,6 +1,6 @@
 package member.model.vo;
 
-public class Member {
+public abstract class Member {
     private String name;
     private String grade;
     private int point;
@@ -36,6 +36,6 @@ public class Member {
     }
 
     public double calculateInterest() {
-        return this.point * 0.0;
+        return point * 0.0;
     }
 }
