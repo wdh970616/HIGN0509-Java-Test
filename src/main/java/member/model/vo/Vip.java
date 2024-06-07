@@ -1,4 +1,4 @@
 package member.model.vo;
 
-public class Vip {
+public class Vip extends Member {
 }
