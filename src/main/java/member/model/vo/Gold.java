@@ -1,4 +1,4 @@
 package member.model.vo;
 
-public class Gold {
+public class Gold extends Member {
 }
