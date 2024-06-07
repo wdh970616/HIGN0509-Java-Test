@@ -20,7 +20,6 @@ public class MemberRepository {
     }
 
     public void printData() {
-        System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
         for (int i = 0; i < memberList.size(); i++) {
             System.out.print(memberList.get(i).getGrade() + " 등급 회원 "
                     + memberList.get(i).getName() + "의 포인트는 "
