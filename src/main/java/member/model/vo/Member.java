@@ -36,6 +36,6 @@ public class Member {
     }
 
     public double calculateInterest() {
-        return 0.0;
+        return this.point * 0.0;
     }
 }
