@@ -1,9 +1,6 @@
 package member.controller;
 
-import member.model.vo.Gold;
-import member.model.vo.Member;
-import member.model.vo.Silver;
-import member.model.vo.Vip;
+import member.model.vo.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,5 +37,21 @@ public class MemberRepository {
 
     public static int howManyMembers() {
         return memberCount;
+    }
+
+    public void printBuyInfo(int price) {
+        for (int i = 0; i < memberList.size(); i++) {
+            System.out.print(memberList.get(i).getGrade() + "등급 회원 "
+            + memberList.get(i).getName() + "은(는) "
+            + price + "원 상품을 ");
+            if (memberList.get(i) instanceof Silver) {
+                System.out.print(((Silver) memberList.get(i)).buy(price));
+            } else if (memberList.get(i) instanceof Gold) {
+                System.out.print(((Gold) memberList.get(i)).buy(price));
+            } else {
+                System.out.print(((Vip) memberList.get(i)).buy(price));
+            }
+            System.out.println("원에 구입합니다.");
+        }
     }
 }

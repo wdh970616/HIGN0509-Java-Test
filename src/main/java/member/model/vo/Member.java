@@ -35,7 +35,5 @@ public abstract class Member {
         this.point = point;
     }
 
-    public double calculateInterest() {
-        return point * 0.0;
-    }
+    public abstract double calculateInterest();
 }
