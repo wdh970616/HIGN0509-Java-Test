@@ -15,8 +15,11 @@ public class MemberRepository {
     public MemberRepository() {
     }
 
+    private static int memberCount = 0;
+
     public void insertMember(Member m) {
         memberList.add(m);
+        memberCount++;
     }
 
     public void printData() {
@@ -33,5 +36,9 @@ public class MemberRepository {
             }
             System.out.println("입니다.");
         }
+    }
+
+    public static int howManyMembers() {
+        return memberCount;
     }
 }

@@ -1,5 +1,6 @@
 package member.run;
 
+import member.controller.Exception;
 import member.controller.MemberRepository;
 import member.model.vo.Gold;
 import member.model.vo.Silver;
@@ -15,7 +16,17 @@ public class Run {
         memberRepository.insertMember(new Gold("이회장", "Gold", 2000));
         memberRepository.insertMember(new Gold("오회장", "Gold", 3000));
         memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+        memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+        memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+        memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+        memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+        memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
 
+        try {
+            new Exception().checkHowManyMember();
+        } catch (java.lang.Exception e) {
+            e.printStackTrace();
+        }
 
         System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
         memberRepository.printData();
